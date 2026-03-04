@@ -1,5 +1,4 @@
-
-html_content = '''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -522,6 +521,116 @@ html_content = '''<!DOCTYPE html>
             width: 0;
         }
 
+        /* Projects Section - NEW */
+        .projects {
+            padding: 6rem 5%;
+            position: relative;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 3rem auto 0;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            padding: 2rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: var(--light);
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.03);
+            box-shadow: 0 20px 40px rgba(0, 245, 212, 0.1);
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .project-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.25rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .project-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.5px;
+        }
+
+        .project-description {
+            font-size: 0.95rem;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            font-size: 0.7rem;
+            padding: 0.25rem 0.75rem;
+            background: rgba(0, 245, 212, 0.1);
+            border: 1px solid rgba(0, 245, 212, 0.2);
+            border-radius: 20px;
+            color: var(--primary);
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--primary);
+            transition: gap 0.3s;
+        }
+
+        .project-card:hover .project-link {
+            gap: 1rem;
+        }
+
+        .project-link span {
+            font-size: 1.2rem;
+        }
+
         /* Contact Section */
         .contact {
             padding: 6rem 5%;
@@ -763,6 +872,7 @@ html_content = '''<!DOCTYPE html>
             .about-grid { grid-template-columns: 1fr; gap: 2rem; }
             .stats { grid-template-columns: 1fr; }
             .contact-wrapper { grid-template-columns: 1fr; gap: 2rem; }
+            .projects-grid { grid-template-columns: 1fr; }
             .cursor, .cursor-follower { display: none; }
             body { cursor: auto; }
             .btn { cursor: pointer; }
@@ -788,6 +898,7 @@ html_content = '''<!DOCTYPE html>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -818,7 +929,7 @@ html_content = '''<!DOCTYPE html>
             </p>
             <div class="hero-cta">
                 <a href="#contact" class="btn btn-primary">Get In Touch →</a>
-                <a href="#about" class="btn btn-secondary">Learn More</a>
+                <a href="#projects" class="btn btn-secondary">View Projects</a>
             </div>
         </div>
     </section>
@@ -903,6 +1014,46 @@ html_content = '''<!DOCTYPE html>
         </div>
     </section>
 
+    <!-- Projects Section - NEW with your CV Builder -->
+    <section class="projects" id="projects">
+        <div class="section-header reveal">
+            <p class="section-label">Featured Work</p>
+            <h2 class="section-title">Latest Projects</h2>
+        </div>
+        <div class="projects-grid">
+            <!-- CV Builder Project - Your link here -->
+            <a href="https://green-26.github.io/CV-BUILDER/" target="_blank" class="project-card reveal">
+                <div class="project-icon">📄</div>
+                <h3 class="project-title">Professional CV Builder</h3>
+                <p class="project-description">
+                    A powerful, real-time CV generation tool with live preview, multiple templates, 
+                    and PDF export. Features glassmorphism UI, progress tracking, and local storage.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">PDF Generation</span>
+                </div>
+                <div class="project-link">
+                    View Project <span>→</span>
+                </div>
+            </a>
+
+            <!-- Placeholder for next project -->
+            <a href="#" class="project-card reveal" style="opacity: 0.7; pointer-events: none;">
+                <div class="project-icon">🚧</div>
+                <h3 class="project-title">Coming Soon</h3>
+                <p class="project-description">
+                    Another exciting project is in development. Stay tuned for updates!
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">In Development</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
     <section class="contact" id="contact">
         <div class="section-header reveal">
             <p class="section-label">Contact</p>
@@ -952,7 +1103,7 @@ html_content = '''<!DOCTYPE html>
                     </div>
                 </div>
                 <div class="social-links">
-                    <a href="#" class="social-link" title="GitHub">GH</a>
+                    <a href="https://github.com/green-26" target="_blank" class="social-link" title="GitHub">GH</a>
                     <a href="#" class="social-link" title="LinkedIn">LI</a>
                     <a href="#" class="social-link" title="Twitter">TW</a>
                     <a href="#" class="social-link" title="Dribbble">DR</a>
@@ -991,7 +1142,7 @@ html_content = '''<!DOCTYPE html>
         }
         animateCursor();
 
-        document.querySelectorAll('a, button, .btn').forEach(el => {
+        document.querySelectorAll('a, button, .btn, .project-card').forEach(el => {
             el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
             el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
         });
@@ -1093,19 +1244,4 @@ html_content = '''<!DOCTYPE html>
         });
     </script>
 </body>
-</html>'''
-
-# Save the file
-with open('/mnt/kimi/output/abijuru_bertin_portfolio_v3.html', 'w', encoding='utf-8') as f:
-    f.write(html_content)
-
-print("✅ Portfolio v3 created with improved fonts!")
-print("📁 File saved to: /mnt/kimi/output/abijuru_bertin_portfolio_v3.html")
-print("\n🎨 Font Improvements:")
-print("   • Inter (body) - Clean, professional, highly readable")
-print("   • Space Grotesk (headings) - Modern, geometric, stylish")
-print("   • Smaller, tighter typography throughout")
-print("   • Better letter-spacing and line-height")
-print("   • More minimalist, elegant feel")
-print("\n🔗 Connected to Formspree: https://formspree.io/f/xreavqqb")
-print("📱 WhatsApp: +250 792 743 880 (clickable)")
+</html>
