@@ -21,14 +21,14 @@
     <meta property="og:url" content="https://green-26.github.io/">
     <meta property="og:title" content="ABIJURU Bertin - Creative Web Developer from Kigali">
     <meta property="og:description" content="Professional portfolio showcasing web development projects, skills, and the popular CV Builder tool with real-time PDF generation.">
-    <meta property="og:image" content="https://green-26.github.io/og-image.jpg">
+    <meta property="og:image" content="https://green-26.github.io/Screenshot 2026-03-05 123037.png">
     <meta property="og:site_name" content="ABIJURU Bertin Portfolio">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ABIJURU Bertin - Creative Web Developer">
     <meta name="twitter:description" content="Professional web developer portfolio from Kigali, Rwanda featuring the CV Builder project.">
-    <meta name="twitter:image" content="https://green-26.github.io/twitter-card.jpg">
+    <meta name="twitter:image" content="https://green-26.github.io/Screenshot 2026-03-05 123037.png">
     
     <!-- Geo Tags -->
     <meta name="geo.region" content="RW">
@@ -55,7 +55,7 @@
         "@type": "Person",
         "name": "ABIJURU Bertin",
         "url": "https://green-26.github.io/",
-        "image": "https://green-26.github.io/profile.jpg",
+        "image": "https://green-26.github.io/Screenshot%202026-03-05%20123037.png",
         "description": "Creative Web Developer based in Kigali, Rwanda specializing in modern web applications and the CV Builder tool.",
         "email": "bertingreentonic@gmail.com",
         "telephone": "+250792743880",
@@ -442,7 +442,7 @@
             letter-spacing: -0.5px;
         }
 
-        /* About Section */
+        /* About Section - Enhanced */
         .about {
             padding: 6rem 5%;
             position: relative;
@@ -473,6 +473,13 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(0, 245, 212, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .about-image-frame:hover {
+            transform: scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 245, 212, 0.3);
         }
 
         .about-image-content {
@@ -484,6 +491,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            position: relative;
         }
 
         .about-image-content img {
@@ -491,6 +499,25 @@
             height: 100%;
             object-fit: cover;
             border-radius: 16px;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image-content:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+            background: var(--primary);
+            color: var(--dark);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 245, 212, 0.3);
         }
 
         .about-text {
@@ -501,6 +528,11 @@
 
         .about-text p {
             margin-bottom: 1.25rem;
+        }
+
+        .about-highlight {
+            color: var(--primary);
+            font-weight: 600;
         }
 
         .stats {
@@ -522,6 +554,7 @@
         .stat-item:hover {
             border-color: rgba(0, 245, 212, 0.3);
             transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.03);
         }
 
         .stat-number {
@@ -604,7 +637,7 @@
             width: 0;
         }
 
-        /* Projects Section */
+        /* Projects Section - Updated */
         .projects {
             padding: 6rem 5%;
             position: relative;
@@ -1041,26 +1074,33 @@
     <section class="about" id="about">
         <div class="section-header reveal">
             <p class="section-label">About Me</p>
-            <h2 class="section-title">Crafting Digital Solutions</h2>
+            <h2 class="section-title">Creative Developer from Kigali</h2>
         </div>
         <div class="about-grid">
             <div class="about-image reveal">
                 <div class="about-image-frame">
                     <div class="about-image-content">
-                        <img src="Screenshot 2026-03-05 123037.png" alt="ABIJURU Bertin - Creative Developer">
+                        <img src="Screenshot 2026-03-05 123037.png" alt="ABIJURU Bertin - Creative Developer from Kigali, Rwanda">
+                        <div class="about-badge">🇷🇼 Kigali</div>
                     </div>
                 </div>
             </div>
             <div class="about-text reveal">
                 <p>
-                    I'm a developer based in Kigali, Rwanda, dedicated to creating clean, 
-                    functional digital experiences. I believe good design should be invisible—
-                    letting the content and functionality shine through.
+                    I'm <span class="about-highlight">ABIJURU Bertin</span>, a creative developer based in Kigali, Rwanda, 
+                    dedicated to creating clean, functional digital experiences. I believe good design 
+                    should be invisible—letting the content and functionality shine through.
                 </p>
                 <p>
-                    With 5 years of experience in web development, I focus on writing clean code 
+                    With <span class="about-highlight">5+ years of experience</span> in web development, I focus on writing clean code 
                     and creating intuitive interfaces that solve real problems for real people. 
                     My expertise spans frontend frameworks, backend systems, and modern UI/UX principles.
+                </p>
+                <p>
+                    I'm passionate about building tools that empower users, like my 
+                    <span class="about-highlight">Professional CV Builder</span> project, which helps people create 
+                    stunning resumes in minutes. Every line of code I write is aimed at making 
+                    the digital world more accessible and beautiful.
                 </p>
                 <div class="stats">
                     <div class="stat-item">
@@ -1127,29 +1167,12 @@
             <h2 class="section-title">Latest Projects</h2>
         </div>
         <div class="projects-grid">
-            <a href="https://green-26.github.io/CV-BUILDER/" target="_blank" class="project-card reveal">
-                <div class="project-icon">📄</div>
-                <h3 class="project-title">Professional CV Builder</h3>
-                <p class="project-description">
-                    A powerful, real-time CV generation tool with live preview, multiple templates, 
-                    and PDF export. Features glassmorphism UI, progress tracking, and local storage.
-                </p>
-                <div class="project-tech">
-                    <span class="tech-tag">HTML5</span>
-                    <span class="tech-tag">CSS3</span>
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">PDF Generation</span>
-                </div>
-                <div class="project-link">
-                    View Project <span>→</span>
-                </div>
-            </a>
-
+            <!-- CV Builder project card removed as requested -->
             <a href="#" class="project-card reveal" style="opacity: 0.7; pointer-events: none;">
                 <div class="project-icon">🚧</div>
                 <h3 class="project-title">Coming Soon</h3>
                 <p class="project-description">
-                    Another exciting project is in development. Stay tuned for updates!
+                    New projects are in development. Stay tuned for updates!
                 </p>
                 <div class="project-tech">
                     <span class="tech-tag">In Development</span>
