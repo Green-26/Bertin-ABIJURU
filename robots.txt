@@ -1,9 +1,25 @@
+# robots.txt for ABIJURU Bertin Portfolio
+# https://green-26.github.io/Bertin-ABIJURU/
+
 User-agent: *
 Allow: /
 
-# Allow all search engines to crawl everything
+# Sitemap location
+Sitemap: https://green-26.github.io/Bertin-ABIJURU/sitemap.xml
+
+# Crawl delay to be respectful to servers
+Crawl-delay: 1
+
+# Disallow admin or private areas (if any)
 Disallow: /private/
 Disallow: /admin/
 
-# Sitemap location
-Sitemap: https://green-26.github.io/Bertin-ABIJURU/sitemap.xml
+# Allow all images to be indexed
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+
+# Optimize crawling for better performance
+Host: green-26.github.io
