@@ -35,13 +35,13 @@
     <meta name="geo.placename" content="Kigali">
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
 
     <!-- Sitemap -->
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="sitemap" type="application/xml" href="sitemap.xml">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -443,7 +443,7 @@
             letter-spacing: -0.5px;
         }
 
-        /* About Section - Enhanced */
+        /* About Section */
         .about {
             padding: 6rem 5%;
             position: relative;
@@ -638,7 +638,7 @@
             width: 0;
         }
 
-        /* Projects Section - Updated */
+        /* Projects Section */
         .projects {
             padding: 6rem 5%;
             position: relative;
@@ -691,10 +691,6 @@
         .project-icon {
             font-size: 2.5rem;
             margin-bottom: 1.25rem;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .project-title {
@@ -835,6 +831,7 @@
             pointer-events: none;
             opacity: 0.7;
             color: transparent;
+            position: relative;
         }
 
         .btn-primary.loading::after {
@@ -1019,8 +1016,6 @@
             .footer-links { gap: 1rem; }
         }
     </style>
-<base target="_blank">
-<base target="_blank">
 </head>
 <body>
     <div class="cursor"></div>
@@ -1170,17 +1165,37 @@
             <h2 class="section-title">Latest Projects</h2>
         </div>
         <div class="projects-grid">
-            <!-- CV Builder project card removed as requested -->
-            <a href="#" class="project-card reveal" style="opacity: 0.7; pointer-events: none;">
-                <div class="project-icon">🚧</div>
-                <h3 class="project-title">Coming Soon</h3>
+            <!-- TTC Muhanga Website -->
+            <a href="https://green-26.github.io/TTC-MUHANGA/" target="_blank" class="project-card reveal">
+                <div class="project-icon">🏫</div>
+                <h3 class="project-title">TTC Muhanga</h3>
                 <p class="project-description">
-                    New projects are in development. Stay tuned for updates!
+                    Official website for Teacher Training College Muhanga. Features program details,
+                    JICA partnership information, and student placement guidelines for four teacher
+                    education programs.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">Responsive Design</span>
+                    <span class="tech-tag">Educational</span>
+                </div>
+                <div class="project-link">
+                    Visit Website <span>→</span>
+                </div>
+            </a>
+
+            <!-- Coming Soon -->
+            <div class="project-card reveal">
+                <div class="project-icon">🚧</div>
+                <h3 class="project-title">More Coming Soon</h3>
+                <p class="project-description">
+                    New projects are in development. Stay tuned for updates on CV Builder and other creative tools!
                 </p>
                 <div class="project-tech">
                     <span class="tech-tag">In Development</span>
                 </div>
-            </a>
+            </div>
         </div>
     </section>
 
@@ -1234,7 +1249,7 @@
                 </div>
                 <div class="social-links">
                     <a href="https://github.com/green-26" target="_blank" class="social-link" title="GitHub">GH</a>
-                    <a href="#" class="social-link" title="LinkedIn">LI</a>
+                    <a href="https://linkedin.com/in/abijuru-bertin" target="_blank" class="social-link" title="LinkedIn">LI</a>
                     <a href="#" class="social-link" title="Twitter">TW</a>
                     <a href="#" class="social-link" title="Dribbble">DR</a>
                 </div>
@@ -1252,7 +1267,7 @@
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
-            <a href="/sitemap.xml">Sitemap</a>
+            <a href="sitemap.xml">Sitemap</a>
         </div>
         <p class="footer-text">
             Made with <span class="footer-heart">❤️</span> in Kigali
@@ -1354,7 +1369,7 @@
 
                 if (response.ok) {
                     formMessage.className = 'form-message success';
-                    formMessage.textContent = '✅ Message sent! I'll reply soon.';
+                    formMessage.textContent = '✅ Message sent! I\'ll reply soon.';
                     contactForm.reset();
                 } else throw new Error('Failed');
             } catch (error) {
@@ -1363,7 +1378,10 @@
             } finally {
                 submitBtn.classList.remove('loading');
                 btnText.textContent = 'Send Message';
-                setTimeout(() => formMessage.style.display = 'none', 5000);
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                    formMessage.className = 'form-message';
+                }, 5000);
             }
         });
 
@@ -1386,3 +1404,4 @@
     </script>
 </body>
 </html>
+    
