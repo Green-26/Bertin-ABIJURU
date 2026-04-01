@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+
     <!-- Primary Meta Tags -->
     <title>ABIJURU Bertin | Creative Developer & CV Builder Expert from Kigali, Rwanda</title>
     <meta name="title" content="ABIJURU Bertin - Creative Web Developer & CV Builder Expert">
@@ -12,10 +12,10 @@
     <meta name="keywords" content="web developer Rwanda, CV builder, portfolio, creative developer, Kigali, React developer, JavaScript expert, ABIJURU Bertin, frontend developer, web applications, UI/UX designer">
     <meta name="author" content="ABIJURU Bertin">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://green-26.github.io/">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://green-26.github.io/">
@@ -23,33 +23,32 @@
     <meta property="og:description" content="Professional portfolio showcasing web development projects, skills, and the popular CV Builder tool with real-time PDF generation.">
     <meta property="og:image" content="https://green-26.github.io/Bertin-ABIJURU/Bertin.jpg">
     <meta property="og:site_name" content="ABIJURU Bertin Portfolio">
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ABIJURU Bertin - Creative Web Developer">
     <meta name="twitter:description" content="Professional web developer portfolio from Kigali, Rwanda featuring the CV Builder project.">
     <meta name="twitter:image" content="https://green-26.github.io/Bertin-ABIJURU/Bertin.jpg">
-    
+
     <!-- Geo Tags -->
     <meta name="geo.region" content="RW">
     <meta name="geo.placename" content="Kigali">
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -82,7 +81,7 @@
         }
     }
     </script>
-    
+
     <style>
         * {
             margin: 0;
@@ -1026,7 +1025,7 @@
 <body>
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
-    
+
     <div class="bg-animation"></div>
     <div class="particles" id="particles"></div>
     <div class="orb orb-1"></div>
@@ -1345,17 +1344,17 @@
             e.preventDefault();
             submitBtn.classList.add('loading');
             btnText.textContent = 'Sending...';
-            
+
             try {
                 const response = await fetch(contactForm.action, {
                     method: 'POST',
                     body: new FormData(contactForm),
                     headers: { 'Accept': 'application/json' }
                 });
-                
+
                 if (response.ok) {
                     formMessage.className = 'form-message success';
-                    formMessage.textContent = '✅ Message sent! I\'ll reply soon.';
+                    formMessage.textContent = '✅ Message sent! I'll reply soon.';
                     contactForm.reset();
                 } else throw new Error('Failed');
             } catch (error) {
